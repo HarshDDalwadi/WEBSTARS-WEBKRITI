@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/index.css" />
+    <link rel="stylesheet" href="../static/index.css" />
+    <link rel="stylesheet" href="../static/preloader.css">
+    <link rel="shortcut icon" href="../static/favicons/icons8-home-16.png" type="image/x-icon">
+    <title>Webkriti | Home Page</title>
+  </head>
+  <body>
+    <%- include('preloader.ejs') %>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+      var countDownDate = new Date("Jan 12, 2023 15:37:25").getTime();
+
+      var x = setInterval(function () {
+
+        var now = new Date().getTime();
+    
+        var distance = countDownDate - now;
+    
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+        document.getElementById("days").innerHTML = "Days : " + days;
+        document.getElementById("hours").innerHTML = "Hours : " + hours;
+        document.getElementById("minutes").innerHTML = "Minutes : " + minutes;
+        document.getElementById("seconds").innerHTML = "Seconds : " + seconds;
+    
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("timer").innerHTML = "LAUNCH INITIATED";
+        }
+      }, 1000);
+
+      let mybutton = document.getElementById("myBtn");
+      
+
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <%- include('header.ejs') %>
+    <div class="for-centre">
+      <div class="boot-profile">
+        <marquee behavior="scrolling" direction="left" scrollamount="20">BOOT_PROFILE : <span class="name"> HELLO, <%=name%> </span></marquee>
+      </div>
+    </div>
+    <div class="central-text">
+      <div class="central-text-1" id="central-text-1">TECHNOLOGY</div>
+      <div class="line" id="line"></div>
+      <div class="central-text-2" id="central-text-2">
+          <div class="word1">ADDICTS</div>
+      </div>
+    </div>      
+    <div class="central-text-body" id="central-text-body">
+      <div class="quote">
+        <span>"Technology</span> <span>is </span> <span>best </span>
+        <span>when </span> <span>it </span> <span>brings  </span>
+        <span>people </span> <span>together." </span> 
+      </div>
+      <span>Join </span>
+      <span>us </span> <span>as </span> <span>we</span>
+      <span>celebrate</span> <span>the</span>
+      <div class="show-big">
+        <span>biggest </span> <span>techfest</span> <span>of the</span>
+        <span> Central India.</span>
+      </div>
+      <div class="date">
+        <div class="date-start">12/1/2022</div>
+        <div class="date-line"></div>
+        <div class="date-end">16/1/2022</div>
+      </div>
+    </div>
+      <div id="timer">
+      <div id="days"></div>
+      <div id="hours"></div>
+      <div id="minutes"></div>
+      <div id="seconds"></div>
+      </div>
+
+    <div class="button button_slide slide_right">
+      <a href="/register">
+        JOIN NOW </a></div>
+   
+    <div class="right">
+      <div class="mail">
+        <a href="mailto:abviiitm.ac.in">
+          abviiitm.ac.in
+        </a>
+      </div>
+      <div class="line2"></div>
+    </div>
+
+    <div class="left">
+      <div class="socials">
+
+        <div class="insta social-icon">
+          <a href="https://www.instagram.com/iiitmgwaliorofficial/?hl=en" target="_blank">
+            <img src="../static/insta.png" alt="This is insta" id="insta-img">
+          </a>
+        </div>
+        <div class="github social-icon">
+           <a href="https://github.com/MSVelan/Web-Krithi" target="_blank">
+            <img src="../static/icons8-github-50.png" alt="This is github">
+          </a></div>
+        <div class="linkedin social-icon">
+          <a href="https://www.linkedin.com/in/abv-iiitm-gwalior-36396618b/" target="_blank">
+            <img src="../static/icons8-linkedin-2-50.png" alt="This is linkedin">
+          </a></div>
+      </div>
+      <div class="line1"></div>
+    </div>
+    <div class="page-line"></div>
+    <div class="about-fest" id="about">
+
+      <div class="about-fest-text">
+        <div class="page2-title">About TechFest</div>
+        <div class="fest-info">After a gap of 2 years, Techfest is back on the grounds of ABV-IIITM Gwalior, rising greater than ever before. With an aim to promote creative, innovative and technical skills among the youth, Techfest is organied. We believe everyone should get an equal opportunity to showcase their talents and distance should not create a hindrance. At the 1st edition of Techfest, we will take a deep dive into the abyssal mystery and explore the unfathomable possibilities that lie beneath our oceans. In this journey, come join us in this expedition through a mystical realm! </div>
+      </div>
+
+      <div class="about-fest-img">
+        <img src="../static/Technical-Innovation.png" alt="This is image" class="about-fest-event-img">
+        <img src="../static/research-4170441__340.jpg" alt="" class="about-fest-event-img">
+        <img src="../static/istockphoto-1341880384-170667a.jpg" alt="" class="about-fest-event-img">
+      </div>
+      </div>
+      
+      <div class="page-line-2"></div>
+      <div class="page2-title" id="events">Events</div>
+      <div class="page-2">
+        <div class="events-page">
+
+        <div class="flip-card event">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/Robotics.jpg" alt="Event" class="event-image">
+            </div>
+            <div class="flip-card-back">
+              <div class="card-info">
+                <h1>RoboWars</h1>
+                <p>12/5/2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quo facere veniam in obcaecati iste, voluptates impedit libero tenetur cupiditate dicta nostrum reiciendis aperiam culpa deleniti soluta fugit animi officia consequuntur dolor incidunt nesciunt molestiae. Consequatur facere commodi odit in?</p>
+              </div>
+              <button class="card-btn"> <a href="/event_1" class="card-btn-link">Explore</a></button>
+              <button class="card-btn"> <a href="/register-event" class="card-btn-link">Register</a></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card event">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/Codecode.jpg" alt="Event" class="event-image">
+            </div>
+            <div class="flip-card-back">
+              <div class="card-info">
+                <h1>CoDecode</h1>
+                <p>12/5/2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quo facere veniam in obcaecati iste, voluptates impedit libero tenetur cupiditate dicta nostrum reiciendis aperiam culpa deleniti soluta fugit animi officia consequuntur dolor incidunt nesciunt molestiae. Consequatur facere commodi odit in?</p>
+              </div>
+              <button class="card-btn"> <a href="/event_2" class="card-btn-link">Explore</a></button>
+              <button class="card-btn"> <a href="/register-event" class="card-btn-link">Register</a></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card event">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/cozmoclench.webp" alt="Event" class="event-image">
+            </div>
+            <div class="flip-card-back">
+              <div class="card-info">
+                <h1>Cozmo Clench</h1>
+                <p>12/5/2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quo facere veniam in obcaecati iste, voluptates impedit libero tenetur cupiditate dicta nostrum reiciendis aperiam culpa deleniti soluta fugit animi officia consequuntur dolor incidunt nesciunt molestiae. Consequatur facere commodi odit in?</p>
+              </div>
+              <button class="card-btn"> <a href="/event_3" class="card-btn-link">Explore</a></button>
+              <button class="card-btn"> <a href="/register-event" class="card-btn-link">Register</a></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card event">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/spinning-globe_smart-city_iot_skyscrapers_city-scape_internet_digital-transformation-100777501-large.webp" alt="Event" class="event-image">
+            </div>
+            <div class="flip-card-back">
+              <div class="card-info">
+                <h1>Generate-A-Thon</h1>
+                <p>12/5/2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quo facere veniam in obcaecati iste, voluptates impedit libero tenetur cupiditate dicta nostrum reiciendis aperiam culpa deleniti soluta fugit animi officia consequuntur dolor incidunt nesciunt molestiae. Consequatur facere commodi odit in?</p>
+              </div>
+              <button class="card-btn"> <a href="/event_4" class="card-btn-link">Explore</a></button>
+              <button class="card-btn"> <a href="/register-event" class="card-btn-link">Register</a></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card event">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/Home Automation.jpg" alt="Event" class="event-image">
+            </div>
+            <div class="flip-card-back">
+              <div class="card-info">
+                <h1>Home Automation</h1>
+                <p>12/5/2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quo facere veniam in obcaecati iste, voluptates impedit libero tenetur cupiditate dicta nostrum reiciendis aperiam culpa deleniti soluta fugit animi officia consequuntur dolor incidunt nesciunt molestiae. Consequatur facere commodi odit in?</p>
+              </div>
+              <button class="card-btn"> <a href="/event_5" class="card-btn-link">Explore</a></button>
+              <button class="card-btn"> <a href="/register-event" class="card-btn-link">Register</a></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card event">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/Young innovator.jpeg" alt="Event" class="event-image">
+            </div>
+            <div class="flip-card-back">
+              <div class="card-info">
+                <h1>Young Innovator</h1>
+                <p>12/5/2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quo facere veniam in obcaecati iste, voluptates impedit libero tenetur cupiditate dicta nostrum reiciendis aperiam culpa deleniti soluta fugit animi officia consequuntur dolor incidunt nesciunt molestiae. Consequatur facere commodi odit in?</p>
+              </div>
+              <button class="card-btn"> <a href="/event_6" class="card-btn-link">Explore</a></button>
+              <button class="card-btn"> <a href="/register-event" class="card-btn-link">Register</a></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card event">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/weldridge.jpg" alt="Event" class="event-image">
+            </div>
+            <div class="flip-card-back">
+              <div class="card-info">
+                <h1>WeldRight</h1>
+                <p>12/5/2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quo facere veniam in obcaecati iste, voluptates impedit libero tenetur cupiditate dicta nostrum reiciendis aperiam culpa deleniti soluta fugit animi officia consequuntur dolor incidunt nesciunt molestiae. Consequatur facere commodi odit in?</p>
+              </div>
+              <button class="card-btn"> <a href="/event_7" class="card-btn-link">Explore</a></button>
+              <button class="card-btn"> <a href="/register-event" class="card-btn-link">Register</a></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card event">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/olympiad.png" alt="Event" class="event-image">
+            </div>
+            <div class="flip-card-back">
+              <div class="card-info">
+                <h1>Olympiad</h1>
+                <p>12/5/2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quo facere veniam in obcaecati iste, voluptates impedit libero tenetur cupiditate dicta nostrum reiciendis aperiam culpa deleniti soluta fugit animi officia consequuntur dolor incidunt nesciunt molestiae. Consequatur facere commodi odit in?</p>
+              </div>
+              <button class="card-btn"> <a href="/event_8" class="card-btn-link">Explore</a></button>
+              <button class="card-btn"> <a href="/register-event" class="card-btn-link">Register</a></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card event">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/RowBotics.webp" alt="Event" class="event-image">
+            </div>
+            <div class="flip-card-back">
+              <div class="card-info">
+                <h1>RowBotics</h1>
+                <p>12/5/2022</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quo facere veniam in obcaecati iste, voluptates impedit libero tenetur cupiditate dicta nostrum reiciendis aperiam culpa deleniti soluta fugit animi officia consequuntur dolor incidunt nesciunt molestiae. Consequatur facere commodi odit in?</p>
+              </div>
+              <button class="card-btn"> <a href="/event_9" class="card-btn-link">Explore</a></button>
+              <button class="card-btn"> <a href="/register-event" class="card-btn-link">Register</a></button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+        <button class="view-more-event" >
+          <a href="https://www.funnyshortjokes.com/" target="_blank">
+          Explore</a></button>
+        </div>
+    </div>
+
+    <div class="page-line-2"></div>
+    <div class="page2-title">Speakers</div>
+    <div class="page-3">
+      <div class="speakers-page">
+        <div class="flip-card event">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/APJAbdulKalam.webp" alt="Event" class="event-image">
+            </div>
+            <div class="flip-card-back">
+              <div class="card-info">
+                <h1 style=" line-height: 1;margin-bottom:5%; margin-top: 1%">APJ Abdul Kalam</h1>
+                <br><p>Date: 12/1/2022 | Time: 14.00</p> <br>
+                <p>Avul Pakir Jainulabdeen Abdul Kalam was an Indian aerospace scientist and statesman who served as the 11th President of India from 2002 to 2007. He was born and raised in Rameswaram, Tamil Nadu and studied physics and aerospace engineering.</p>
+              </div>
+              <button class="card-btn"> <a href="https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam" class="card-btn-link">Explore</a></button>
+              <button class="card-btn"> <a href="/register" class="card-btn-link">Register</a></button>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card event">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/Dalailama1_20121014_4639.jpg" alt="Event" class="event-image">
+            </div>
+            <div class="flip-card-back">
+              <div class="card-info">
+                <h1 style=" line-height: 1;margin-bottom:5%; margin-top: 1%">Dalai Lama</h1>
+                <br><p>Date: 13/1/2022 | Time: 14.00</p><br>
+                <p>Dalai Lama is a title given by the Tibetan people to the foremost spiritual leader of the Gelug or "Yellow Hat" school of Tibetan Buddhism, the newest and most dominant of the four major schools of Tibetan Buddhism.The 14th and current Dalai Lama is Tenzin Gyatso, who lives as a refugee in India.</p>
+              </div>
+              <button class="card-btn"> <a href="https://en.wikipedia.org/wiki/Dalai_Lama" class="card-btn-link">Explore</a></button>
+              <button class="card-btn"> <a href="/register" class="card-btn-link">Register</a></button>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card event">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../static/Stephen_Hawking.StarChild.jpg" alt="Event" class="event-image">
+            </div>
+            <div class="flip-card-back">
+              <div class="card-info">
+                <h1 style=" line-height: 1;margin-bottom:5%; margin-top: 1%">Stephen Hawking</h1>
+                <br><p>Date: 14/1/2022 | Time: 14.00</p><br>
+                <p>Stephen William Hawking CH CBE FRS FRSA was an English theoretical physicist, cosmologist, and author who, at the time of his death, was director of research at the Centre for Theoretical Cosmology at the University of Cambridge.</p>
+              </div>
+              <button class="card-btn"> <a href="https://en.wikipedia.org/wiki/Stephen_Hawking" class="card-btn-link">Explore</a></button>
+              <button class="card-btn"> <a href="/register" class="card-btn-link">Register</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-line-2"></div>
+    <div class="page2-title">Where is it?</div>
+
+
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.3760221131806!2d78.17195011430894!3d26.249456894647444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c6e5d32a4d53%3A0xf834069adc0c9b89!2sAtal%20Bihari%20Vajpayee%20Indian%20Institute%20of%20Information%20Technology%20and%20Management%20Gwalior!5e0!3m2!1sen!2sin!4v1665050042168!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map" id="google-map"></iframe>
+      </div>
+      <div class="page-line-2"></div>
+      <div class="page2-title">Latest Tech Videos</div>
+      <div class="more-videos">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FwxSm6EdJUU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ErMwWXQxHp0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bHjaFnmv7UQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+
+      </div>
+    </div>
+    <%- include('footer.ejs') %>
+    </body>
+</html>
