@@ -1,5 +1,17 @@
-# Web-Krithi
-Web development project using nodejs ,expressjs, postgresql
+# Web-Krithi: TechFest Website
+Web development project using nodejs ,expressjs, postgresql, HTML, CSS
+
+
+#Features Implemented
+Landing page, Login, Registration and Sign-Up pages, Events page
+
+#Technologies Used
+
+##Frontend
+HTML, CSS, javaScript
+
+##Backend
+expresss, node, postgres, bcrypt, passport, express-session, express-flash, path, alert, dotenv
 
 ## Step 1:
 
@@ -27,3 +39,5 @@ create table users<br />(id BIGSERIAL primary key not null,<br /> name varchar(5
 ## Step 4:
  
 To start the project you can use the command: **npm run dev** in the root directory
+
+
