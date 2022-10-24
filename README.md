@@ -2,10 +2,10 @@
 Web development project using nodejs ,expressjs, postgresql, HTML, CSS
 
 
-#Features Implemented
+##Features Implemented
 **Landing page, Login, Registration and Sign-Up pages, Events page**
 
-#Technologies Used
+##Technologies Used
 
 ##Frontend
 **HTML, CSS, javaScript**
