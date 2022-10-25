@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-    <title>Document</title>
-</head>
-<body>
-
-    <a href="/logout">Logout</a>
-    <h1>Hello <%= user %></h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/user-dashboard.css" />
+    <link rel="shortcut icon" href="../static/favicons/icons8-launch-16.png" type="image/x-icon">
+    <title>Webkriti | User : <%=name %></title>
+  </head>
+  <body>
+    <%- include('header.ejs') %>
+    <h1>User-Dashboard</h1>
+    <div class="main-1">
+      <div class="main">
+        Name: <%=name %> <br />
+        <br />
+        Email: <%=email %> <br />
+        <br />
+        <div class="events">
+          List of participating events :
+          <div class="events-list">
+            <% if(typeof results != 'undefined'){ %> <%
+            results.rows.forEach(result =>{ %>
+            <li><%= result.event_name %></li>
+            <% }) %> <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
